@@ -9,13 +9,7 @@ $(window).on('scroll', loadMoreProduct);
 $('#filterBtn').on('click', changeWithFilter);
 
 function loadMoreProduct(){
-	setInterval(function(){
-		console.log({
-			scrTop: $(window).scrollTop(),
-			docHeight: $(document).height(),
-			winHeight:  $(window).height()
-		})
-	},100)
+	
 	if( $(window).scrollTop() >= $(document).height() - $(window).height() ) {
 		
 		let currentPage = Number($('[name="hidden-current-page"]').attr('value'));

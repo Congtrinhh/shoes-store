@@ -41,22 +41,34 @@
         <div class="slider" id="main-slider">
             <div class="slides__wrapper">
     
-                <c:forEach items="${ctaList}" var="cta">
-                    <div class="slide"
-                        style="background-image: url('${pageContext.request.contextPath}/resources/imgs/cta/${cta.cta_banner_location}');">
-                        <div class="slide__info">
-                            <p class="slide__info__header">${cta.cta_title}</p>
-                            <a href="${pageContext.request.contextPath}${cta.cta_slug}"
-                                class="btn btn-cta  button button-pulse">${cta.cta_button_text}</a>
-                        </div>
+                <div class="slide"
+                    style="background-image: url('./lib/img/cta/https___hypebeast.com_image_2019_05_banner-3-2-betrue-sneaker-pack-2019-pride-month-closer-look-18-1.jpg');">
+                    <div class="slide__info">
+                        <p class="slide__info__header">New arrivals</p>
+                        <a href="./men.html"
+                            class="btn btn-cta  button button-pulse">Go shop</a>
                     </div>
-                </c:forEach>
-    
+                </div>
+                <div class="slide" style="background-image: url('./lib/img/cta/Nike-Waffle-Trainer-II-DB3004-800-01.jpg');">
+                    <div class="slide__info">
+                        <p class="slide__info__header">Men's collection</p>
+                        <a href="./men.html"
+                            class="btn btn-cta  button button-pulse">Go shop</a>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('./lib/img/cta/Nike-Waffle-Trainer-2-DA8291-100-Release-Date-3.jpg');">
+                    <div class="slide__info">
+                        <p class="slide__info__header">Women's collection</p>
+                        <a href="./women.html"
+                            class="btn btn-cta  button button-pulse">Go shop</a>
+                    </div>
+                </div>
+
             </div>
             <div class="slider__indicator">
-                <c:forEach items="${ctaList}" var="cta">
-                    <div class="dot"></div>
-                </c:forEach>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
             </div>
         </div>
     
@@ -67,13 +79,13 @@
     
             <div class="col-12 col-md-6 mb-5 mb-md-0">
                 <div class="collection__men"
-                    style="background-image: url('${pageContext.request.contextPath}/resources/imgs/collection/ebay-authentication.jpg')">
+                    style="background-image: url('./lib/img/collection/ox-street-7k4TGXsQCPY-unsplash.jpg')">
                 </div>
                 <h3>Shop Men's Collection</h3>
             </div>
             <div class="col-12 col-md-6 mb-5 mb-md-0">
                 <div class="collection__women"
-                    style="background-image: url('${pageContext.request.contextPath}/resources/imgs/collection/ox-street-7k4TGXsQCPY-unsplash.jpg')">
+                    style="background-image: url('./lib/img/collection/ebay-authentication.jpg')">
                 </div>
                 <h3>New Arrival's Collection</h3>
             </div>
@@ -85,23 +97,77 @@
                 <h2 class="best-sellers__header">BEST SELLERS</h2>
                 <div class="best-sellers__list row">
     
-    
-                    <c:forEach items="${productList}" var="product">
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                            <div class="product buy-now">
-                                <a class="product__img"
-                                    href="${pageContext.request.contextPath}${product.c_slug}${product.pr_slug}">
-                                    <img src="data:image/jpg;base64,${product.base64Image}" alt="a pair of shoes">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product buy-now">
+                            <a class="product__img"
+                                href="./product_detail.html">
+                                <img src="./lib/img//product/men/adidas-Giay_ZX_2K_Boost_2.0_DJen_GZ7735_01_standard.jpg" alt="a pair of shoes">
+                            </a>
+                            <div class="product__info">
+                                <a href="./product_detail.html">
+                                    <h2 class="product__info__title">Nike air force 1</h2>
                                 </a>
-                                <div class="product__info">
-                                    <a href="${pageContext.request.contextPath}${product.c_slug}${product.pr_slug}">
-                                        <h2 class="product__info__title">${product.pr_name}</h2>
-                                    </a>
-                                    <p class="product__info__price money">${product.pr_price}</p>
-                                </div>
+                                <p class="product__info__price money">99</p>
                             </div>
                         </div>
-                    </c:forEach>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product buy-now">
+                            <a class="product__img" href="./product_detail.html">
+                                <img src="./lib/img//product/men/adidas-Giay_ZX_2K_Boost_2.0_DJen_GZ7735_01_standard.jpg"
+                                    alt="a pair of shoes">
+                            </a>
+                            <div class="product__info">
+                                <a href="./product_detail.html">
+                                    <h2 class="product__info__title">Nike air force 1</h2>
+                                </a>
+                                <p class="product__info__price money">99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product buy-now">
+                            <a class="product__img" href="./product_detail.html">
+                                <img src="./lib/img//product/men/adidas-Giay_ZX_2K_Boost_2.0_DJen_GZ7735_01_standard.jpg"
+                                    alt="a pair of shoes">
+                            </a>
+                            <div class="product__info">
+                                <a href="./product_detail.html">
+                                    <h2 class="product__info__title">Nike air force 1</h2>
+                                </a>
+                                <p class="product__info__price money">99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product buy-now">
+                            <a class="product__img" href="./product_detail.html">
+                                <img src="./lib/img//product/men/adidas-Giay_ZX_2K_Boost_2.0_DJen_GZ7735_01_standard.jpg"
+                                    alt="a pair of shoes">
+                            </a>
+                            <div class="product__info">
+                                <a href="./product_detail.html">
+                                    <h2 class="product__info__title">Nike air force 1</h2>
+                                </a>
+                                <p class="product__info__price money">99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product buy-now">
+                            <a class="product__img" href="./product_detail.html">
+                                <img src="./lib/img//product/men/adidas-Giay_ZX_2K_Boost_2.0_DJen_GZ7735_01_standard.jpg"
+                                    alt="a pair of shoes">
+                            </a>
+                            <div class="product__info">
+                                <a href="./product_detail.html">
+                                    <h2 class="product__info__title">Nike air force 1</h2>
+                                </a>
+                                <p class="product__info__price money">99</p>
+                            </div>
+                        </div>
+                    </div>
     
     
                 </div>
@@ -113,22 +179,22 @@
                 <div class="partners__list row">
                     <div class="col-6 col-md-4 col-lg-3 mb-4 mb-lg-0">
                         <div class="partner"
-                            style="background-image: url('${pageContext.request.contextPath}/resources/imgs/trusted_partner/brand-1.jpg');">
+                            style="background-image: url('./lib/img/trusted_partner/brand-1.jpg');">
                         </div>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3 mb-4 mb-lg-0">
                         <div class="partner"
-                            style="background-image: url('${pageContext.request.contextPath}/resources/imgs/trusted_partner/brand-2.jpg');">
+                            style="background-image: url('./lib/img/trusted_partner/brand-2.jpg');">
                         </div>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3 mb-4 mb-lg-0">
                         <div class="partner"
-                            style="background-image: url('${pageContext.request.contextPath}/resources/imgs/trusted_partner/brand-3.jpg');">
+                            style="background-image: url('./lib/img/trusted_partner/brand-3.jpg');">
                         </div>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3 mb-4 mb-lg-0">
                         <div class="partner"
-                            style="background-image: url('${pageContext.request.contextPath}/resources/imgs/trusted_partner/brand-5.jpg');">
+                            style="background-image: url('./lib/img/trusted_partner/brand-5.jpg');">
                         </div>
                     </div>
                 </div>

@@ -43,13 +43,13 @@
                 my-note="khu vực dành cho chức năng nếu người dùng chưa đăng nhập, chuyển qua trang login">
                 <input type="text" hidden name="login-token-for-user" value="${sessionScope.login_token}">
                 <!-- js căn cứ vào đây để biết ng dùng đã login hay chưa, nếu chưa, khi click nút 'tiếp tục' sẽ đc chuyển sang trang login -->
-                <a class="btn-login" href="${pageContext.request.contextPath}/user-login" style="display:none;">qua trang
+                <a class="btn-login" href="./index.htmluser-login" style="display:none;">qua trang
                     login</a>
             </div>
         
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">cart</li>
                 </ol>
             </nav>
@@ -108,7 +108,7 @@
                     </div>
         
                     <div class="empty-cart col-12">
-                        <img src="${pageContext.request.contextPath}/resources/imgs/exception/empty-cart.png">
+                        <img src="./lib/img/exception/empty-cart.png">
                     </div>
         
                 </div>

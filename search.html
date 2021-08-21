@@ -22,11 +22,11 @@
     <link rel="stylesheet" href="./lib/css/utils.css">
     <link rel="stylesheet" href="./lib/css/header_footer.css">
     <link rel="stylesheet" href="./lib/css/header_footer_responsive.css">
-    <link rel="stylesheet" href="./men/css/style.css">
-    <link rel="stylesheet" href="./men/css/responsive.css">
+    <link rel="stylesheet" href="./search/css/style.css">
+    <link rel="stylesheet" href="./search/css/responsive.css">
     <script defer src="./lib/js/loadComponent.js"></script>
     <script defer src="./lib/js/utils.js"></script>
-    <script defer src="./men/js/main.js"></script>
+    <script defer src="./search/js/main.js"></script>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
 
             <nav aria-label="breadcrumb" class="container">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Search</li>
                 </ol>
             </nav>
@@ -55,47 +55,80 @@
             
                     <picture>
                         <source media="(max-width: 991px)"
-                            srcset="${pageContext.request.contextPath}/resources/imgs/banner/h-banner-1.jpg">
-                        <img src="${pageContext.request.contextPath}/resources/imgs/banner/v-banner-2.jpg" alt="a shoes banner">
+                            srcset="./lib/img/banner/h-banner-1.jpg">
+                        <img src="./lib/img/banner/v-banner-2.jpg" alt="a shoes banner">
                     </picture>
             
                     <picture>
                         <source media="(max-width: 991px)" srcset="">
-                        <img src="${pageContext.request.contextPath}/resources/imgs/banner/v-banner-1.jpg" alt="a shoes banner">
+                        <img src="./lib/img/banner/v-banner-1.jpg" alt="a shoes banner">
                     </picture>
             
                 </div>
             
                 <div class="products col-lg-9">
-                    <h3 class="result-header">Kết quả tìm kiếm cho "${sessionScope.productNameForSearching}":</h3>
+                    <h3 class="result-header">Kết quả tìm kiếm cho "air":</h3>
             
                     <div class="product-row row">
             
-                        <c:forEach items="${productList}" var="product">
-            
-                            <div class="col-12 col-md-6 col-xl-4 mb-4">
-                                <div class="product">
-                                    <a class="product__img"
-                                        href="${pageContext.request.contextPath}${product.c_slug}${product.pr_slug}">
-                                        <img src='data:image/jpg;base64,${product.base64Image}' alt="">
+                        <div class="col-12 col-md-6 col-xl-4 mb-4">
+                            <div class="product">
+                                <a class="product__img"
+                                    href="./product_detail.html">
+                                    <img src='./lib/img/product/men/nike-force-1-le-younger-shoe-rg3gD7_2.jpg' alt="">
+                                </a>
+                                <div class="product__info">
+                                    <a href="./product_detail.html">
+                                        <h2 class="product__info__title">Nike air force 1</h2>
                                     </a>
-                                    <div class="product__info">
-                                        <a href="${pageContext.request.contextPath}${product.c_slug}${product.pr_slug}">
-                                            <h2 class="product__info__title">${product.pr_name}</h2>
-                                        </a>
-                                        <p class="product__info__price money">${product.pr_price}</p>
-                                    </div>
+                                    <p class="product__info__price money">99</p>
                                 </div>
                             </div>
-            
-                        </c:forEach>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4 mb-4">
+                            <div class="product">
+                                <a class="product__img" href="./product_detail.html">
+                                    <img src='./lib/img/product/men/nike-air-jordan-7-retro-shoe-xbNFP8.jpg' alt="">
+                                </a>
+                                <div class="product__info">
+                                    <a href="./product_detail.html">
+                                        <h2 class="product__info__title">Nike air retro 2</h2>
+                                    </a>
+                                    <p class="product__info__price money">199</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4 mb-4">
+                            <div class="product">
+                                <a class="product__img" href="./product_detail.html">
+                                    <img src='./lib/img/product/men/nike-air-jordan-7-retro-shoe-xbNFP8.jpg' alt="">
+                                </a>
+                                <div class="product__info">
+                                    <a href="./product_detail.html">
+                                        <h2 class="product__info__title">Nike air retro 3</h2>
+                                    </a>
+                                    <p class="product__info__price money">199</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4 mb-4">
+                            <div class="product">
+                                <a class="product__img" href="./product_detail.html">
+                                    <img src='./lib/img/product/men/ananas-pro_A61112_1.jpg' alt="">
+                                </a>
+                                <div class="product__info">
+                                    <a href="./product_detail.html">
+                                        <h2 class="product__info__title">Nike air retro 4</h2>
+                                    </a>
+                                    <p class="product__info__price money">199</p>
+                                </div>
+                            </div>
+                        </div>
             
                     </div>
             
                     <div class="pagination">
                         <ul>
-                            <!-- Item loader -->
-                            <jsp:include page="/WEB-INF/views/fragments/itemLoader.html"></jsp:include>
                         </ul>
                     </div>
                 </div>

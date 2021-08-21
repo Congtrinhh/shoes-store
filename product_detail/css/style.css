@@ -51,7 +51,7 @@
   flex-wrap: wrap;
 }
 .detail__right__list > li {
-  margin-right: 6px;
+  margin-right: 10px;
   color: #fff;
   display: flex;
   justify-content: center;

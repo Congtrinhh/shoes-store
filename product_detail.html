@@ -11,6 +11,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Jquery validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"
+        integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -39,9 +43,9 @@
 
             <main class="main container">
                 <div class="product-in-local-storage-info" style="display:none;">
-                    <input type="text" hidden name="hidden-id" value="${product.product_line_id}">
-                    <input type="text" hidden name="hidden-name" value="${product.pr_name}">
-                    <input type="text" hidden name="hidden-price" value="${product.pr_price}">
+                    <input type="text" hidden name="hidden-id" value="1">
+                    <input type="text" hidden name="hidden-name" value="Nike air force 1">
+                    <input type="text" hidden name="hidden-price" value="99">
                     <input type="text" hidden name="hidden-category-slug" value="${categorySlug}">
                     <input type="text" hidden name="hidden-product-slug" value="${productLineSlug}">
             
@@ -49,14 +53,14 @@
                     <input type="text" hidden name="specificProducts" value=${specificProductInfoList}>
             
                     <!-- for buy now button to forward to cart page -->
-                    <a class="go-to-cart-page" href="${pageContext.request.contextPath}/cart" style="display:none;">go to cart
+                    <a class="go-to-cart-page" href="./cart.html" style="display:none;">go to cart
                         page</a>
                 </div>
             
                 <!-- Breadcrumb -->
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">product detail</li>
                     </ol>
                 </nav>
@@ -69,23 +73,21 @@
                             <div>
                                 <div id="product-slider" class="carousel slide carousel-fade" data-bs-ride="">
                                     <ol class="carousel-indicators">
-                                        <c:forEach items="${imagesList}" var="image" varStatus="status">
-                                            <li data-bs-target="#product-slider" data-bs-slide-to="${status.index}" class="">
-                                                <img src="data:image/jpg;base64,${image.base64Image}" alt="">
-                                            </li>
-                                        </c:forEach>
+                                        <li data-bs-target="#product-slider" data-bs-slide-to="${status.index}" class="">
+                                            <img src="./lib/img/product/men/ananas-pro_A61112_1.jpg" alt="">
+                                        </li>
                                     </ol>
             
                                     <div class="carousel-inner">
-                                        <c:forEach items="${imagesList}" var="image">
-                                            <div class="carousel-item">
-                                                <img src="data:image/jpg;base64,${image.base64Image}" class="d-block w-100"
-                                                    alt="...">
-                                            </div>
-                                            <!-- this hidden input must be here because it is relevant to c:forEach -->
-                                            <input type="text" hidden name="hidden-image"
-                                                value="data:image/jpg;base64,${image.base64Image}">
-                                        </c:forEach>
+                                    <c:forEach items="${imagesList}" var="image">
+                                        <div class="carousel-item">
+                                            <img src="./lib/img/product/men/ananas-pro_A61112_1.jpg" class="d-block w-100"
+                                                alt="...">
+                                        </div>
+                                        <!-- this hidden input must be here because it is relevant to c:forEach -->
+                                        <input type="text" hidden name="hidden-image"
+                                            value="./lib/img/product/men/ananas-pro_A61112_1.jpg">
+                                    </c:forEach>
                                     </div>
             
                                     <a class="carousel-control-prev" href="#product-slider" role="button" data-bs-slide="prev">
@@ -102,9 +104,9 @@
                         </div>
             
                         <div class="detail__right col-12 col-md-6">
-                            <h1 class="detail__right__header">${product.pr_name}</h1>
-                            <p class="detail__right__price money">${product.pr_price}</p>
-                            <p class="detail__right__short-description">${product.pr_description}</p>
+                            <h1 class="detail__right__header">Nike air force 1</h1>
+                            <p class="detail__right__price money">99</p>
+                            <p class="detail__right__short-description">Best seller đến từ Nike</p>
                             <form id='productOption' method="GET" action='${pageContext.request.contextPath}/cart'>
                                 <div class="detail__right__color select-option">
                                     <p class="detail__right__list-header">color</p>

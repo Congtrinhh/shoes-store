@@ -51,9 +51,6 @@
                             <h3 class="form-header">hãng</h3>
                             <select name='brand' id='brand' class='form-select'>
                                 <option value='0' selected>all</option>
-                                <c:forEach items="${brandList}" var="br">
-                                    <option value='${br.id}'>${br.name}</option>
-                                </c:forEach>
                             </select>
                         </fieldset>
             
@@ -87,32 +84,131 @@
             
                 <div class="products col-lg-9">
                     <div class="product-row row">
-            
-                        <c:forEach items="${productList}" var="product">
-            
-                            <div class="col-12 col-md-6 col-xl-4 mb-4">
-                                <div class="product">
-                                    <a class="product__img"
-                                        href="${pageContext.request.contextPath}${product.c_slug}${product.pr_slug}">
-                                        <img src='data:image/jpg;base64,${product.base64Image}' alt="">
+                
+                        <div class="col-12 col-md-6 col-xl-4 mb-4">
+                            <div class="product">
+                                <a class="product__img" href="./product_detail.html">
+                                    <img src='./lib/img/product/men/new-balance-m880f11_nb_02_i.jpg' alt="">
+                                </a>
+                                <div class="product__info">
+                                    <a href="./product_detail.html">
+                                        <h2 class="product__info__title">Nike air force 1</h2>
                                     </a>
-                                    <div class="product__info">
-                                        <a href="${pageContext.request.contextPath}${product.c_slug}${product.pr_slug}">
-                                            <h2 class="product__info__title">${product.pr_name}</h2>
-                                        </a>
-                                        <p class="product__info__price money">${product.pr_price}</p>
-                                    </div>
+                                    <p class="product__info__price money">99</p>
                                 </div>
                             </div>
-            
-                        </c:forEach>
-            
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4 mb-4">
+                            <div class="product">
+                                <a class="product__img" href="./product_detail.html">
+                                    <img src='./lib/img/product/men/new-balance-mx608wn5_nb_02_i.jpg'
+                                        alt="">
+                                </a>
+                                <div class="product__info">
+                                    <a href="./product_detail.html">
+                                        <h2 class="product__info__title">Nike air force 1</h2>
+                                    </a>
+                                    <p class="product__info__price money">99</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col-12 col-md-6 col-xl-4 mb-4">
+                            <div class="product">
+                                <a class="product__img" href="./product_detail.html">
+                                    <img src='./lib/img/product/men/new-balance-ml574nr2_nb_02_i.jpg' alt="">
+                                </a>
+                                <div class="product__info">
+                                    <a href="./product_detail.html">
+                                        <h2 class="product__info__title">Nike air force 1</h2>
+                                    </a>
+                                    <p class="product__info__price money">99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4 mb-4">
+                            <div class="product">
+                                <a class="product__img" href="./product_detail.html">
+                                    <img src='./lib/img/product/men/ananas-pro_A61112_1.jpg' alt="">
+                                </a>
+                                <div class="product__info">
+                                    <a href="./product_detail.html">
+                                        <h2 class="product__info__title">Nike air force 1</h2>
+                                    </a>
+                                    <p class="product__info__price money">99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4 mb-4">
+                            <div class="product">
+                                <a class="product__img" href="./product_detail.html">
+                                    <img src='./lib/img/product/men/ananas-Pro_AV00020_1.jpg' alt="">
+                                </a>
+                                <div class="product__info">
+                                    <a href="./product_detail.html">
+                                        <h2 class="product__info__title">Nike air force 1</h2>
+                                    </a>
+                                    <p class="product__info__price money">99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4 mb-4">
+                            <div class="product">
+                                <a class="product__img" href="./product_detail.html">
+                                    <img src='./lib/img/product/men/ananas-1-7.jpg' alt="">
+                                </a>
+                                <div class="product__info">
+                                    <a href="./product_detail.html">
+                                        <h2 class="product__info__title">Nike air force 1</h2>
+                                    </a>
+                                    <p class="product__info__price money">99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4 mb-4">
+                            <div class="product">
+                                <a class="product__img" href="./product_detail.html">
+                                    <img src='./lib/img/product/men/adidas-FORUM_84_LOW_trang_GZ8959_01_standard.jpg' alt="">
+                                </a>
+                                <div class="product__info">
+                                    <a href="./product_detail.html">
+                                        <h2 class="product__info__title">Nike air force 1</h2>
+                                    </a>
+                                    <p class="product__info__price money">99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4 mb-4">
+                            <div class="product">
+                                <a class="product__img" href="./product_detail.html">
+                                    <img src='./lib/img/product/men/adidas-FORUM_84_LOW_trang_GZ8959_01_standard.jpg' alt="">
+                                </a>
+                                <div class="product__info">
+                                    <a href="./product_detail.html">
+                                        <h2 class="product__info__title">Nike air force 1</h2>
+                                    </a>
+                                    <p class="product__info__price money">99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4 mb-4">
+                            <div class="product">
+                                <a class="product__img" href="./product_detail.html">
+                                    <img src='./lib/img/product/men/adidas-FORUM_84_LOW_trang_GZ8959_01_standard.jpg' alt="">
+                                </a>
+                                <div class="product__info">
+                                    <a href="./product_detail.html">
+                                        <h2 class="product__info__title">Nike air force 1</h2>
+                                    </a>
+                                    <p class="product__info__price money">99</p>
+                                </div>
+                            </div>
+                        </div>
+                
                     </div>
-            
+                
                     <div class="pagination">
                         <ul>
-                            <!-- Item loader -->
-                            <jsp:include page="/WEB-INF/views/fragments/itemLoader.html"></jsp:include>
                         </ul>
                     </div>
                 </div>
