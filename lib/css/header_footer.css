@@ -369,7 +369,7 @@ h3 {
 
 /* áº¨n admin login, chá»‰ hiá»‡n khi nÃ³ Ä‘Æ°á»£c click trong menu */
 .login-default > li:last-child {
-  /*display: none;*/
+  display: none;
 }
 
 /* Footer tren mobile */
