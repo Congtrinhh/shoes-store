@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jQuery validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"
+        integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./lib/css/utils.css">
+    <link rel="stylesheet" href="./register/css/style.css">
+    <!-- Js file - for validation with jquery validation -->
+    <script defer src="./register/js/main.js"></script>
+</head>
+
+<body>
+
+    <div id="app" class="container">
+        <a href="./index.html" class="to-home-page">
+            &lt;&lt; Trang chủ</a>
+    
+                <form id='userForm' method='' action=''>
+                    <h1 class="form-header">Đăng ký</h1>
+    
+                    <div class='form-text'>
+                        <input type='text' class="essential-data" name='name' required>
+                        <label for='' class='label-name'>
+                            <p class='content-name__placeholder'>Tên tài khoản</p>
+                        </label>
+                        <span></span>
+                    </div>
+    
+                    <div class='form-text'>
+                        <input type='email' class="essential-data" name='email' required email>
+                        <label for='email' class='label-name'>
+                            <p class='content-name__placeholder'>Email</p>
+                        </label>
+                        <span></span>
+                    </div>
+    
+                    <div class='form-text'>
+                        <input type='password' class="essential-data" name='password' required>
+                        <label for='' class='label-name'>
+                            <p class='content-name__placeholder'>Mật khẩu</p>
+                        </label>
+                        <span></span>
+                    </div>
+    
+                    <div class='form-text'>
+                        <input type='password' name='confirmed-password' required>
+                        <label for='confirmed-password' class='label-name'>
+                            <p class='content-name__placeholder'>Xác nhận mật khẩu</p>
+                        </label>
+                        <span></span>
+                    </div>
+    
+                    <div class='form-checkbox'>
+                        <input type='checkbox' name='policy-agree' id='policy-agree' value='1' required>
+                        <label for='policy-agree'>Đồng ý với điều khoản của trang web này</label>
+                    </div>
+    
+                    <button class="btn btn-submit" type="submit">Đăng ký</button>
+                </form>
+    
+                <p class="error-message"></p>
+    
+                <div class="action">
+                    <a href="#" class="btn forget-password">Quên mật khẩu</a>
+                    <a href="./login.html" class="btn ">Đăng nhập</a>
+                </div>
+    
+    </div>
+</body>
+</html>

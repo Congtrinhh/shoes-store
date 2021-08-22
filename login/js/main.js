@@ -8,7 +8,7 @@ $('#userForm').validate({
     }
 });
 
-$('.btn').on('click', function(e){
+$('.btn[type="submit"]').on('click', function(e){
     e.preventDefault();
     if ( $('#userForm').valid() ) {
         if ( $('[name="name"]').val() =='tomcat' && $('[name="password"]').val() =="12345" ) {
