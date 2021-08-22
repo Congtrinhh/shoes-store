@@ -21,25 +21,18 @@
 			referrerpolicy="no-referrer"
 		></script>
 		<link rel="stylesheet" href="./lib/css/utils.css" />
-		<link rel="stylesheet" href="./login/css/style.css" />
+		<link rel="stylesheet" href="./admin_login/css/style.css" />
 		<!-- Js file - for validation with jquery validation -->
-		<script defer src="./login/js/main.js"></script>
+		<script defer src="./admin_login/js/main.js"></script>
 	</head>
 
 	<body>
 		<div id="app" class="container">
-			<div class="link-wrapper">
-				<a href="./index.html" class="to-home-page">
-					&lt;&lt; Trang chủ
-				</a>
-				<a href="./admin_login.html" class="">Đăng nhập admin</a>
-			</div>
-
-			<form id="userForm" method="" action="./index.html">
-				<h1 class="form-header">Đăng nhập</h1>
+			<form id="adminForm" method="" action="">
+				<h1 class="form-header">Đăng nhập Admin</h1>
 
 				<div class="form-text">
-					<input type="text" name="name" required />
+					<input type="text" name="name" placeholder="" required />
 					<label for="" class="label-name">
 						<p class="content-name__placeholder">Tên tài khoản</p>
 					</label>
@@ -47,7 +40,7 @@
 				</div>
 
 				<div class="form-text">
-					<input type="password" name="password" required />
+					<input type="password" name="password" placeholder="" required />
 					<label for="" class="label-name">
 						<p class="content-name__placeholder">Mật khẩu</p>
 					</label>
@@ -55,12 +48,7 @@
 				</div>
 
 				<div class="form-checkbox">
-					<input
-						type="checkbox"
-						name="remember-me"
-						id="remember-me"
-						value="1"
-					/>
+					<input type="checkbox" name="remember-me" id="remember-me" value="1" />
 					<label for="remember-me">Remmeber me</label>
 				</div>
 
@@ -71,12 +59,11 @@
 				</div>
 			</form>
 
-			<p class="error-message"></p>
+			<p class="error-message" style="color: red; margin-bottom: 10px"></p>
+
 			<div class="action">
-				<a href="./forget-password.html" class="btn forget-password">
-					Quên mật khẩu
-				</a>
-				<a href="./register.html" class="btn">Đăng ký</a>
+				<a href="#" class="btn forget-password">Quên mật khẩu</a>
+				<a href="./index.html" class="btn to-homepage">&lt;&lt; Trang chủ</a>
 			</div>
 		</div>
 	</body>

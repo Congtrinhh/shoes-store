@@ -13,7 +13,6 @@ $('form').on('click', function(){
 	$('.error-message').removeClass('on');
 })
 
-
 // ---------------- ẩn / hiện nút đổi mk ----------------
 $('.btn-show').on('click', function(e) {
     $('.update-password-area').toggleClass('on');
@@ -36,6 +35,12 @@ $(window).on('load', function() {
     $('body').on('click', '.btn-logout', function(e) {
 		localStorage.setItem('login-token', '');
 	})
+
+
+    $('#user-navigation-bar > li:first-child > a').addClass('active');
+    $('#user-navigation-bar > li > a').on('click', function(){
+        localStorage.setItem('user-tab-link', $(this).attr('href'));
+    })
 })
 
 // -------------- validate form --------------------
