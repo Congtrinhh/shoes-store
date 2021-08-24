@@ -162,8 +162,8 @@
   object-position: center;
 }
 
-.btn-add-to-cart {
+.main .btn.btn-add-to-cart {
   border: 1px solid var(--quaternary-color) !important;
   color: var(--quaternary-color);
-  background: transparent;
+  background-color: transparent;
 }
