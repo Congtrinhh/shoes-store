@@ -121,6 +121,8 @@
 }
 .best-sellers__list {
   margin-top: 110px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 .best-sellers__list > * {
   margin-bottom: var(--gutter);

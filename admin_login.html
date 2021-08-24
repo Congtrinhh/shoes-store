@@ -1,70 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Login</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
 
-		<!-- jQuery -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-			integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
-		<!-- jQuery validation -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"
-			integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
-		<link rel="stylesheet" href="./lib/css/utils.css" />
-		<link rel="stylesheet" href="./admin_login/css/style.css" />
-		<!-- Js file - for validation with jquery validation -->
-		<script defer src="./admin_login/js/main.js"></script>
-	</head>
+        <!-- jQuery -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <!-- jQuery validation -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"
+            integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <link rel="stylesheet" href="./lib/css/utils.css" />
+        <link rel="stylesheet" href="./admin_login/css/style.css" />
+        <!-- Js file - for validation with jquery validation -->
+        <script defer src="./admin_login/js/main.js"></script>
+    </head>
 
-	<body>
-		<div id="app" class="container">
-			<form id="adminForm" method="" action="">
-				<h1 class="form-header">Đăng nhập Admin</h1>
+    <body>
+        <div id="app" class="container">
+            <form id="adminForm" method="" action="">
+                <h1 class="form-header">Đăng nhập Admin</h1>
 
-				<div class="form-text">
-					<input type="text" name="name" placeholder="" required />
-					<label for="" class="label-name">
-						<p class="content-name__placeholder">Tên tài khoản</p>
-					</label>
-					<span></span>
-				</div>
+                <div class="form-text">
+                    <input type="text" name="name" placeholder="" required />
+                    <label for="" class="label-name">
+                        <p class="content-name__placeholder">Tên tài khoản</p>
+                    </label>
+                    <span></span>
+                </div>
 
-				<div class="form-text">
-					<input type="password" name="password" placeholder="" required />
-					<label for="" class="label-name">
-						<p class="content-name__placeholder">Mật khẩu</p>
-					</label>
-					<span></span>
-				</div>
+                <div class="form-text">
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder=""
+                        required
+                    />
+                    <label for="" class="label-name">
+                        <p class="content-name__placeholder">Mật khẩu</p>
+                    </label>
+                    <span></span>
+                </div>
 
-				<div class="form-checkbox">
-					<input type="checkbox" name="remember-me" id="remember-me" value="1" />
-					<label for="remember-me">Remmeber me</label>
-				</div>
+                <div class="form-checkbox">
+                    <input
+                        type="checkbox"
+                        name="remember-me"
+                        id="remember-me"
+                        value="1"
+                    />
+                    <label for="remember-me">Remmeber me</label>
+                </div>
 
-				<button class="btn" type="submit">Đăng nhập</button>
-				<div class="sample-info">
-					<p>Username: tomcat</p>
-					<p>Password: 12345</p>
-				</div>
-			</form>
+                <button class="btn" type="submit">Đăng nhập</button>
+                <div class="sample-info">
+                    <p>
+                        Username:
+                        <b>tomcat</b>
+                    </p>
+                    <p>
+                        Password:
+                        <b>12345</b>
+                    </p>
+                </div>
+            </form>
 
-			<p class="error-message" style="color: red; margin-bottom: 10px"></p>
+            <p
+                class="error-message"
+                style="color: red; margin-bottom: 10px"
+            ></p>
 
-			<div class="action">
-				<a href="#" class="btn forget-password">Quên mật khẩu</a>
-				<a href="./index.html" class="btn to-homepage">&lt;&lt; Trang chủ</a>
-			</div>
-		</div>
-	</body>
+            <div class="action">
+                <a href="#" class="btn forget-password">Quên mật khẩu</a>
+                <a href="./index.html" class="btn to-homepage"
+                    >&lt;&lt; Trang chủ</a
+                >
+            </div>
+        </div>
+    </body>
 </html>

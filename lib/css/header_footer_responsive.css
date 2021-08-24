@@ -43,6 +43,7 @@
 
   .logo {
     max-width: 150px;
+    font-size: 2.4rem;
   }
 
   .header__login-signup a {
@@ -164,6 +165,14 @@
   .footer__sub-header {
     margin-bottom: 10px;
   }
+  @keyframes conveyorBelt {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: -300%;
+  }
+}
   .conveyor-belt {
     animation-duration: 10s;
   }
@@ -188,5 +197,8 @@
 @media only screen and (max-width: 448px) {
   :root {
     --menu-padding-left: 20px;
+  }
+  .logo {
+    font-size: 2.4rem;
   }
 }

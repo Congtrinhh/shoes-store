@@ -199,9 +199,10 @@ h3 {
 /* header ribbon */
 .header__ribbon {
   height: 60px;
-  background-color: var(--primary-color);
   padding: 0 20%;
   position: relative;
+background: rgb(11,176,182);
+background: linear-gradient(60deg, rgba(11,176,182,1) 0%, rgba(23,222,209,1) 100%);
 }
 .header__ribbon .header__ribbon__inside {
   height: 100%;
