@@ -60,6 +60,7 @@ h3 {
   display: flex;
   justify-content: flex-end;
   min-width: 300px;
+  display: none;
 }
 .header__login-signup a {
   color: var(--text-color);
@@ -291,7 +292,8 @@ background: linear-gradient(60deg, rgba(11,176,182,1) 0%, rgba(23,222,209,1) 100
   display: none;
 }
 .entity-preview-info {
-  display: none; /* default, it's hidden*/
+  display: flex; /* default, it's hidden*/
+  align-items: center;
 }
 .login-default li + li {
   margin-left: 4px;
