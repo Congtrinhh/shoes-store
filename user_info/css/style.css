@@ -164,3 +164,30 @@ button[data-bs-toggle="collapse"].btn {
 label.error {
   text-align: right;
 }
+
+
+/*  */
+.toast-container {
+  position: fixed;
+  right: 40px;
+  bottom: 180px;
+  /* width: 100%; */
+  /* max-width: var(--container-width); */
+  height: 1px;
+}
+.toast {
+  width: 280px;
+    top: unset;
+    bottom: unset;
+    right: 10px;
+    left: unset;
+    display: none;
+}
+.toast-header > *:first-child {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  margin-right: 6px;
+}
