@@ -176,7 +176,41 @@
 				</main>
 
 				<!-- User nav -->
-				<div class="side-navigation-container col-12 col-md-4 col-lg-3 offset-lg-1"></div>
+				<div class="side-navigation-container col-12 col-md-4 col-lg-3 offset-lg-1">
+					<div class="user-nav-container">
+    <nav class="user-nav">
+        <!-- Badge -->
+        <div class="nav-badge">
+            <div class="img-parent"><img src="./lib/img/avatar/10.jpg" alt=""></div>
+            <h2>tomcat</h2>
+            <!-- button to show, hide nav -->
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#user-navigation-bar"
+                aria-expanded="false" aria-controls="user-navigation-bar"><i class="fas fa-ellipsis-v"></i></button>
+        </div>
+        <!-- Nav -->
+        <ul class="collapse show" id="user-navigation-bar" tab-indicator="${sessionScope.userNavTabIndicator}">
+            <li>
+                <a href="./user_info.html">
+                    <i class="fas fa-home"></i>
+                    <span>Thông tin cá nhân</span>
+                </a>
+            </li>
+            <li>
+                <a href="./user_order_info.html" class="active">
+                    <i class="fas fa-inbox"></i>
+                    <span>Đơn hàng</span>
+                </a>
+            </li>
+            <li>
+                <a href="./index.html" class="btn-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Thoát</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+				</div>
 			</div>
 
 			<!-- Footer -->
