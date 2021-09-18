@@ -113,7 +113,12 @@ h3 {
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
-	margin-right: 16px;
+	margin-right: 6px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.header > .bottom > .center > .login-user .user-info a {
+	color: var(--text-color);
+	font-weight: 500;
 }
 /* Ẩn hiện thông tin nguwiof dùng */
 .header > .bottom > .center > .login-user .login-area {
