@@ -1,35 +1,56 @@
-<header class="header">
+<header class="header smart-scroll">
 	<div class="search-box">
 		<form id="searchForm" method="POST" action="">
-			<input type="text" name="search" placeholder="Search..." />
-			<button class="btn-search"><i class="fas fa-search"></i></button>
+			<input type="text" name="search" placeholder="Nhập gì đó ..." />
+			<button class="btn-search"><i class="fas fa-search"></i> Search</button>
 		</form>
 	</div>
-	<div class="top container">
-		<ul>
+	<!-- <div class="top container">
+		<ul class="login-area">
 			<li><a href="#">Đăng ký</a></li>
 			<li><a href="#">Đăng nhập</a></li>
 		</ul>
-	</div>
+		<div class="user-info">
+			<a href="../user_info.html"><img src="" alt="" /></a>
+			<a href="../user_info.html">David</a>
+		</div>
+	</div> -->
 	<div class="bottom container">
 		<div class="menu-toggle-container" id="menuToggle">
 			<i class="fas fa-bars"></i>
 		</div>
-		<div class="left"><h1 class="logo">Công's shop</h1></div>
+		<div class="left">
+			<h1 class="logo"><a href="../index.html">Công's shop</a></h1>
+		</div>
 		<div class="center">
+			<div class="container login-user">
+				<ul class="login-area">
+					<li><a href="#">Đăng ký</a></li>
+					<li><a href="#">Đăng nhập</a></li>
+				</ul>
+				<div class="user-info">
+					<a href="../user_info.html"><img src="" alt="" /></a>
+					<a href="../user_info.html">David</a>
+				</div>
+			</div>
 			<nav>
 				<ul>
-					<li><a href="">Nam</a></li>
-					<li><a href="">Nữ</a></li>
-					<li><a href="">Giới thiệu</a></li>
-					<li><a href="">Liên hệ</a></li>
+					<li><a href="../men.html">Nam</a></li>
+					<li><a href="../women.html">Nữ</a></li>
+					<li><a href="../coming_soon.html">Giới thiệu</a></li>
+					<li><a href="../coming_soon.html">Liên hệ</a></li>
 				</ul>
 			</nav>
 		</div>
 		<div class="right">
 			<span class="btn-search" id="searchToggle"><i class="fas fa-search"></i></span>
-			<div class="cart"><i class="fas fa-shopping-cart"></i></div>
+			<a href="../cart.html" class="cart"
+				><i class="fas fa-shopping-cart"></i> <span class="number-indicator">1</span></a
+			>
 		</div>
+	</div>
+	<div class="announcement">
+		<p>Giảm giá đến 25% với đơn hàng có giá trị lớn hơn 500000 vnđ</p>
 	</div>
 </header>
 
@@ -40,5 +61,28 @@
 
 	$("#menuToggle").on("click", function (e) {
 		$(".header > .bottom > .center").toggleClass("on");
+		$("body").toggleClass("on");
 	});
+
+	// add padding top to show content behind navbar
+	$("body").css("padding-top", $(".smart-scroll").outerHeight() + "px");
+
+	// detect scroll top or down
+	if ($(".smart-scroll").length > 0) {
+		// check if element exists
+		var last_scroll_top = 0;
+		$(window).on("scroll", function () {
+			scroll_top = $(this).scrollTop();
+			// var navBarHeight = $(".smart-scroll").outerHeight();
+			// if (scroll_top < navBarHeight) {
+			// 	// return;
+			// }
+			if (scroll_top < last_scroll_top) {
+				$(".smart-scroll").removeClass("scrolled-down").addClass("scrolled-up");
+			} else {
+				$(".smart-scroll").removeClass("scrolled-up").addClass("scrolled-down");
+			}
+			last_scroll_top = scroll_top;
+		});
+	}
 </script>
