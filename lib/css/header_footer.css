@@ -89,6 +89,7 @@ h3 {
 	position: relative;
 
 	margin-top: 50px;
+	margin-bottom: 10px;
 }
 .header > .bottom > .center > .login-user {
 	position: absolute;
